@@ -1,7 +1,5 @@
 # Softuni-JS-Fundamentals-2025
 
-# 📘 SoftUni JS Fundamentals 2025
-
 I started the **Programming Fundamentals with JavaScript** course at [SoftUni](https://softuni.bg/) in **September 2025**.
 This repository contains all the tasks, exercises, and small projects I completed while learning the material.
 
