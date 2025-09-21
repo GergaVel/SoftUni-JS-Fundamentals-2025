@@ -2,7 +2,7 @@ function sumDigits (number){
     let numberAsString = String(number);
     let sum = 0;
 
-    for(let i = 0; i < numberAsString.length; i++){
+    for(let i = 0; i < numberAsString.length; i++){ // for(let char of numAsString){ley digit = Number(char)}
         let currentDigit = Number(numberAsString[i]);
         sum += currentDigit;
     }
