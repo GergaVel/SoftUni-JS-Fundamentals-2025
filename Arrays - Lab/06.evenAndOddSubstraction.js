@@ -2,7 +2,7 @@ function substraction(arr) {
     let sumOdd = 0;
     let sumEven = 0;
 
-    for (let number of arr) {
+    for (let number of arr) { // I don't need the index
         number = Number(number);
 
         if (number % 2 === 0) {
