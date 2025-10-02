@@ -1,7 +1,7 @@
 function maxNumber(arr) {
     let result = [];
 
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) { 
         let currentNum = arr[i];
         let isTop = true;
 

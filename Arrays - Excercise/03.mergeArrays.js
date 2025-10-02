@@ -4,9 +4,9 @@ function mergeArrays(arr1, arr2) {
         if(i % 2 === 0){
             newArr[i] = Number(arr1[i]) + Number(arr2[i]);
         } else {
-            let concat1 = arr1[i];
-            let concat2 = arr2[i];
-            newArr[i] = concat1 + concat2;
+            let el1 = arr1[i];
+            let el2 = arr2[i];
+            newArr[i] = el1 + el2;
         }       
     }    
       console.log(newArr.join(' - '));}
