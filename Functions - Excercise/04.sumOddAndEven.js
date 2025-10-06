@@ -1,16 +1,18 @@
-function sumOddAndEven(num){ //from number to string in an array to number
-    let arrOfNum = num.toString().split(''); 
+function sumOddAndEven(num){ //from number to string to number
+    let numAsString = String(num); 
     let sumEven = 0;
     let sumOdd = 0;
 
-    for (let i = 0; i < arrOfNum.length; i++){
-        let currentNumber = Number(arrOfNum[i]);
-        if (currentNumber % 2 === 0){
-            sumEven += currentNumber;
+    for (let char of numAsString){
+        let digit = Number(char);
+
+        if (digit % 2 === 0){
+            sumEven += digit;
         } else {
-            sumOdd += currentNumber
+            sumOdd += digit;
         }
     }
+    
 
     console.log(`Odd sum = ${sumOdd}, Even sum = ${sumEven}`);
     
