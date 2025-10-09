@@ -11,9 +11,8 @@ function negativeORPositive(arr){
         }
     }
 
-    for (let number of result){
-        console.log(number);
-        
+    for (let number of result){ // or you can use console.log(result.join('\n')); to print on new row instead of for loop 
+        console.log(number);        
     }
 }
 
