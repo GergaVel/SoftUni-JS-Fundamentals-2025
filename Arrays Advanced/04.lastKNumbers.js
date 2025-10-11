@@ -6,7 +6,7 @@ function lastKNumbers(n, k){//k = previous elements, n = length of arr
 
         if (startIndex < 0){
             startIndex = 0; //should not go out of the arr
-        }
+        } // rows 5-9 can be replaced by: let startIndex = Math.max(0, i - k); 
 
         let previousThreeNumbers = result.slice(startIndex, i); //save the cutted out elements to a new arr with beginning and and end(i not included not tot en met, alleen tot)
 
