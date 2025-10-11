@@ -1,3 +1,5 @@
+
+
 /* sort() - video name: Obrabotka na masivi, 20:00 if you want to repeat
 
 * сортира difault: като стрингове във азбучен и възходящ ред (не работи добре с различни видеве числа. Например 1, 101, 203, 300, 4, 8 -вшима само първото число под внимание) работи добре ако искаш да ти сортира имена например
@@ -5,7 +7,7 @@ NEEDS A FOLLOWING FUNCTION TO DO WHAT YOU EXACTLY WANT IT TO DO FOR YOU
 
 */
 
-let randomNames = ['Borislav', 'Ana', 'Ivan', 'Maria'];
+/* let randomNames = ['Borislav', 'Ana', 'Ivan', 'Maria'];
 
 randomNames.sort(function (first, second) {
     return first.length - second.length;
