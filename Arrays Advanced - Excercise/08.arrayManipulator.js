@@ -1,0 +1,5 @@
+function arrayManipulator (){
+
+}
+
+arrayManipulator();

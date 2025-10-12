@@ -29,8 +29,8 @@ function searchANum (arr1, arr2) {
     
     let [toTakeOut, toDelete, toFind] = arr2; 
     
-    let slicedArr = arr1.splice(0, toTakeOut);
-    slicedArr.splice(0,toDelete);
+    let slicedArr = arr1.splice(0, toTakeOut); //copy of a part of the original arr
+    slicedArr.splice(0,toDelete); // deleting els
 
   
     let fiteredArr = slicedArr.filter(el => el === toFind);
