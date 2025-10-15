@@ -24,7 +24,7 @@ function computerStore(arr) {
         finalPrice *= 0.90;
    } 
 
-   console.log(`Congratulations you've just bought a new computer!
+console.log(`Congratulations you've just bought a new computer!
 Price without taxes: ${noTaxTotal.toFixed(2)}$
 Taxes: ${taxOnly.toFixed(2)}$
 -----------
