@@ -1,6 +1,6 @@
-function heartDelivery(str){
+function muOnline(str){
     let health = 100;
-    let coins = 0;
+    let bitcoins = 0;
     let bestRoom = 1;
 
     let rooms = str.split('|'); 
@@ -21,9 +21,9 @@ function heartDelivery(str){
             console.log(`You healed for ${healthToAdd} hp.`);
             console.log(`Current health: ${health} hp.`);          
         } else if (command === 'chest') {
-            let coinsFound = value; 
-            coins += coinsFound;
-            console.log(`You found ${coinsFound} coins.`);
+            let bitcoinsFound = value; 
+            bitcoins += bitcoinsFound;
+            console.log(`You found ${bitcoinsFound} bitcoins.`);
         } else {
             let monster = command;
             let attack = value;
@@ -44,10 +44,10 @@ function heartDelivery(str){
 
     if (health > 0){
         console.log("You've made it!");
-        console.log(`Coins: ${coins}`);
+        console.log(`Bitcoins: ${bitcoins}`);
         console.log(`Health: ${health}`)
     }
 }
 
 
-heartDelivery("rat 10|bat 20|potion 10|rat 10|chest 100|boss 70|chest 1000")
+muOnline("rat 10|bat 20|potion 10|rat 10|chest 100|boss 70|chest 1000")

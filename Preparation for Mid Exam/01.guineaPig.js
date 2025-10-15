@@ -22,9 +22,7 @@ function guineaPig(arr) {
     }
   }
 
-  console.log(
-    `Everything is fine! Puppy is happy! Food: ${(foodQtyGr / 1000).toFixed(2)}, Hay: ${(hayQtyGr / 1000).toFixed(2)}, Cover: ${(coverQtyGr / 1000).toFixed(2)}.`
-  );
+  console.log(`Everything is fine! Puppy is happy! Food: ${(foodQtyGr / 1000).toFixed(2)}, Hay: ${(hayQtyGr / 1000).toFixed(2)}, Cover: ${(coverQtyGr / 1000).toFixed(2)}.`);
 }
 
 guineaPig(['10', '5', '5.2', '1']);
