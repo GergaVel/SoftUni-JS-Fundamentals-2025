@@ -15,7 +15,7 @@ function muOnline(str){
 
             if (health + healthToAdd > 100){
                 healthToAdd = 100 - health; 
-            }
+            } //let healed = Math.min(100 - health, healthToAdd);
 
             health += healthToAdd;
             console.log(`You healed for ${healthToAdd} hp.`);
@@ -34,7 +34,7 @@ function muOnline(str){
                 console.log(`You slayed ${monster}.`);                
             } else {
                 console.log(`You died! Killed by ${monster}.`);     
-                console.log(`Best room: ${bestRoom}`);
+                console.log(`Best room: ${bestRoom}`); //i + 1 - is also working well! like this you don't need a bestRoom counter
                 break;                           
             }
         }
