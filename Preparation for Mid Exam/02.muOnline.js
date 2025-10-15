@@ -35,7 +35,7 @@ function muOnline(str){
             } else {
                 console.log(`You died! Killed by ${monster}.`);     
                 console.log(`Best room: ${bestRoom}`); //i + 1 - is also working well! like this you don't need a bestRoom counter
-                break;                           
+                break;      //or return;                        
             }
         }
 
