@@ -1,9 +1,9 @@
 function manOWar(input) {
-    let pirateShip = input.shift().split('>').map(Number); 
-    let warShip = input.shift().split('>').map(Number); 
-    let maxHealth = Number(input.shift());
+    let pirateShip = input.shift().split('>').map(Number); //input[0] is faster
+    let warShip = input.shift().split('>').map(Number); //inout [1]
+    let maxHealth = Number(input.shift()); // input [2]
 
-    for (let i = 0; i < input.length; i++){
+    for (let i = 0; i < input.length; i++){ //if you use input[x] here i = 3;
         let line = input[i];
 
         if (line === 'Retire') break; //short way to write it.
@@ -35,9 +35,7 @@ function manOWar(input) {
                                 return;
                             }                   
                 }
-            }
-
-            
+            }            
 
         } else if (command === 'Repair'){
             let [index, health] = params.map(Number);
