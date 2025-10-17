@@ -1,14 +1,14 @@
-function computerStore(arr) {
+function computerStore(arr) { //mentor sudjested using while loop because of unexpected length of arr or placement of the customerType
    let customerType = arr.pop();
    let noTaxTotal = 0;  
 
         for (let price of arr) {
             price = Number(price);
-            if (price <= 0) {
-                console.log("Invalid price!");
-                continue; 
-            }
-            noTaxTotal += price;
+                if (price <= 0) {
+                    console.log("Invalid price!");
+                    continue; 
+                }
+                        noTaxTotal += price;
         }
 
         if (noTaxTotal === 0) {
