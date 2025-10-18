@@ -1,4 +1,4 @@
-function treasureHunt(input) { // try solving it with while loop and switch case
+function treasureHunt(input) { // try solving it with while loop and switch case 
     let initialLoot = input.shift().split('|');
 
     for (let i = 0; i < input.length; i++) {
