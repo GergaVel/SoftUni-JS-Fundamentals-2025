@@ -14,9 +14,10 @@ function songs(songsDataArr){
     for (let i = 1; i <= numberOfSongs; i++){
         let parsedData = songsDataArr[i].split('_');
         
-        let type = parsedData[0];
-        let songName = parsedData[1];
-        let songTime = parsedData[2];
+        // let type = parsedData[0];
+        // let songName = parsedData[1];
+        // let songTime = parsedData[2];
+        let [type, songName, songTime] = parsedData; //deconstruct arr JS
 
         let song = new Songs (type, songName, songTime); //I create a song
 
