@@ -1,9 +1,8 @@
  function towns(arr) {
-
-    for (let data of arr){
-       let parts = data.split('|');
-       let name = parts.shift();
-       let [longitude, latitude] = parts.map(x => Number(x).toFixed(2))
+    for (let townStr of arr){
+       let [name, latitude, longitude] = townStr.split('|');
+       latitude = Number(latitude).toFixed(2);
+       longitude = Number(longitude).toFixed(2);
             
             let cities = {
                 town: name,
