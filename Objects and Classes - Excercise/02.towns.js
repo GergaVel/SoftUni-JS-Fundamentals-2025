@@ -1,6 +1,6 @@
  function towns(arr) {
     for (let townStr of arr){
-       let [name, latitude, longitude] = townStr.split('|');
+       let [name, latitude, longitude] = townStr.split(' | ');
        latitude = Number(latitude).toFixed(2);
        longitude = Number(longitude).toFixed(2);
             
