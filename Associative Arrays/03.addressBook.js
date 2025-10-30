@@ -18,8 +18,8 @@ function solve(data) {
         return firstKey.localeCompare(secondKey);
     });
 
-    for (let [key, value] of addressBookEntries){
-        console.log(`${key} -> ${value}`);
+    for (let [firstName, address] of addressBookEntries){ // or just key & value
+        console.log(`${firstName} -> ${address}`);
         
     }    
 }
