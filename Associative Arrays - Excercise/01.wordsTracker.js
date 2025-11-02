@@ -8,7 +8,7 @@ function wordsTracker(arr) {
     } 
 
     for (let word of arr){
-        if (word in wordOccurences){
+        if (word in wordOccurences){ // .hasOwnProperty is also an option
             wordOccurences[word]++;
         }  //no else because we don't need the info
     }
