@@ -21,7 +21,7 @@ function legendaryFarming(str) {
             keyMaterialsQty[material] += qty;
             
             if(keyMaterialsQty[material] >= 250){
-                let legendaryBought = materialLegendaries[material]
+                let legendaryBought = materialLegendaries[material]; //instead of if-else's
                     console.log(`${legendaryBought} obtained!`);
                 keyMaterialsQty[material] -= 250;
                 break;
