@@ -1,5 +1,5 @@
 function piccolo (arr) {
-    let parkedCars = new Set();
+    let parkedCars = new Set(); //repeats are being automatically eliminated -> unique values
 
     for (let command of arr){
         let [direction, carNumber] = command.split(', ');
