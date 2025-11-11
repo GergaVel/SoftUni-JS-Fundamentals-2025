@@ -8,7 +8,7 @@ function extractFile(filePath){ //we only need the last element
     let fileExtention = fileInfo.substring(lastDotIdx + 1); //to not include the dot
 
     console.log(`File name: ${fileName}`);
-    console.log(`File extention: ${fileExtention}`);    
+    console.log(`File extension: ${fileExtention}`);    
 }
 
 extractFile('C:\\Internal\\training-internal\\Template.bat.pptx');
