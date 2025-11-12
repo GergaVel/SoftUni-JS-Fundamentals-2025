@@ -6,13 +6,13 @@ function minerTask(arr) {
         let qty = Number(arr[i + 1]);
 
         if (resource in resourceQtys) {
-            resourceQtys[resource] += qty;
+            resourceQtys[resource] += qty; // if the key already exists, add to it this value
         } else {
-            resourceQtys[resource] = qty;
-        }
+            resourceQtys[resource] = qty; // if the key does not exist, create it
+        } 
     }
 
-    let entries = Object.entries(resourceQtys); // returns array with arrays [[], [], []]
+    let entries = Object.entries(resourceQtys); // returns array with arrays [[], [], []]; 
     
     for (let [resource, qty] of entries){
         console.log(`${resource} -> ${qty}`);
