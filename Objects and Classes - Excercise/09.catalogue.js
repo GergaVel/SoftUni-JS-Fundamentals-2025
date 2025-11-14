@@ -1,30 +1,32 @@
 function storeCatalog(productsArr) {
-  // Step 1: Parse each line into an object
-  let products = [];
+    let catalogue = {};
 
-  for (let line of productsArr) {
-    let [name, price] = line.split(' : ');
-    products.push({ name, price: Number(price) });
-  }
-
-  // Step 2: Sort alphabetically by name
-  products.sort((a, b) => a.name.localeCompare(b.name));
-
-  // Step 3: Print grouped by first letter
-  let currentLetter = '';
-
-  for (let product of products) {
-    let firstLetter = product.name[0];
-
-    if (firstLetter !== currentLetter) {
-      console.log(firstLetter);
-      currentLetter = firstLetter;
+    // Parse input into object
+    for (let line of productsArr) {
+        let [productName, price] = line.split(' : ');
+        price = Number(price);
+        catalogue[productName] = price;
     }
 
-    console.log(`  ${product.name}: ${product.price}`);
-  }
-}
+    // Sort by product name
+    let sorted = Object.entries(catalogue)
+        .sort((a, b) => a[0].localeCompare(b[0]));
 
+    let currentLetter = '';
+
+    for (let [name, price] of sorted) {
+        let firstLetter = name[0];
+
+        // If it's a new group letter
+        if (firstLetter !== currentLetter) {
+            currentLetter = firstLetter;
+            console.log(currentLetter);
+        }
+
+        // Print product inside the group
+        console.log(`  ${name}: ${price}`);
+    }
+}
 storeCatalog([
     'Appricot : 20.4',
     'Fridge : 1500',
