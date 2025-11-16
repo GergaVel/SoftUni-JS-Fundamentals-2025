@@ -1,5 +1,29 @@
 function storeCatalog(productsArr) {
-     
+     let products = [];
+
+     for (let product of productsArr){
+        let [name, price] = product.split(':');
+        price = Number(price);
+
+        products.push({name: name, price: price}); //{name, price} - is also correct since the names are all the same
+    }
+
+    let sordedProducts = products.sort((a, b) => a.name.localeCompare(b.name));
+
+    let currentLetter = '';
+
+    for (product of sordedProducts){
+        let firstLetter = product.name[0];
+
+         if (firstLetter !== currentLetter) {
+            currentLetter = firstLetter;
+            console.log(currentLetter);
+        }
+
+        // Print product inside the group
+        console.log(`   ${product.name}: ${product.price}`);
+    }
+    
 }
 
 storeCatalog([
