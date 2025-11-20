@@ -1,51 +1,57 @@
-function worldTour(input){
-    let destinations = input.shift(); //initial string that we will manipulate
-    
-    for (let line of input){
+function worldTour(input) {
+    let destinations = input.shift();
+
+    for (let line of input) {
         let [command, ...params] = line.split(':');
-        
-        if (command === 'Travel'){
+
+        if (command === 'Travel') {
             console.log(`Ready for world tour! Planned stops: ${destinations}`);
-                break;
+            break;
         }
 
-        if (command === 'Add Stop'){
+        if (command === 'Add Stop') {
             let index = Number(params[0]);
             let string = params[1];
 
-                if (index >= 0 && index < destinations.length){
-                    destinations = destinations.substring(0, index) +
-                                   string +
-                                   destinations.substring(index);
+            if (index >= 0 && index < destinations.length) {
+                destinations =
+                    destinations.substring(0, index) +
+                    string +
+                    destinations.substring(index);
+            }
 
-                    console.log(destinations);                    
-                }
+            console.log(destinations);   // ← always prints
 
-        } else if (command === 'Remove Stop'){
+        } else if (command === 'Remove Stop') {
             let startIdx = Number(params[0]);
             let endIdx = Number(params[1]);
 
-             if ((startIdx >= 0 && startIdx < destinations.length) && 
-                 (endIdx >= 0 && endIdx < destinations.length)){
-                    
-                    destinations = destinations.substring(0, startIdx) +
-                                   destinations.substring(endIdx + 1); // from 0 - startIdx and then start form end Idx till end (middle part goes away)
-                   
-                    console.log(destinations);                  
-                }
+            if (startIdx >= 0 &&
+                endIdx >= 0 &&
+                startIdx < destinations.length &&
+                endIdx < destinations.length &&
+                startIdx <= endIdx) {
 
-        } else if (command === 'Switch'){
+                destinations =
+                    destinations.substring(0, startIdx) +
+                    destinations.substring(endIdx + 1);
+            }
+
+            console.log(destinations);  // ← always prints
+
+        } else if (command === 'Switch') {
             let oldString = params[0];
             let newString = params[1];
 
-            while (destinations.includes(oldString)){
-                destinations = destinations.replace(oldString, newString);
+            if (destinations.includes(oldString)) {
+                destinations = destinations.split(oldString).join(newString);
             }
 
-            console.log(destinations);       
+            console.log(destinations);  // ← always prints
         }
-    } 
+    }
 }
+
 
 worldTour(['Hawai::Cyprys-Greece', 
     'Add Stop:7:Rome', 
