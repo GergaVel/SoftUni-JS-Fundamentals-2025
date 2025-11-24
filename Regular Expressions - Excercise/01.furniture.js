@@ -21,7 +21,7 @@ function furniture(arr) {
     console.log("Bought furniture:");
 
     if (furniture.length > 0){
-        furniture.forEach(f => console.log(f)); // == for of loop
+        furniture.forEach(f => console.log(f)); // == for (let f of furniture) {console.log(f)}
     }
     console.log(`Total money spend: ${totalPrice.toFixed(2)}`);   
 }
