@@ -1,3 +1,5 @@
+// to solve it with while loop: https://softuni.bg/trainings/resources/video/113369/video-19-march-2025-todor-stoyanov-programming-fundamentals-with-javascript-january-2025/4830
+//actually really cool, bc he uses while, switch and if for readability
 function activationKeys(input) {
     let activationKey = input.shift();
 
