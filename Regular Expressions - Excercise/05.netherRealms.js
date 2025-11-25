@@ -11,13 +11,45 @@ function netherRealms(str) {
         let healthMatches = demon.match(healthPattern); //retenrs an arr of each char
         let health = 0;
 
-        for (let match of healthMatches){
-            let ascii = match.charCodeAt();
-            health += ascii;
+        if (healthMatches) {
+
+            for (let match of healthMatches){
+                let ascii = match.charCodeAt();
+                health += ascii;
+            }
         }
+
+        let damageMatches = demon.match(damagePattern); //retenrs an arr of each char
+        let damage = 0;
+
+        if (damageMatches){
+
+            for (let match of damageMatches){
+                match = Number(match);
+                damage += match;
+            }
+        }
+
+        let factorSignMatches = demon.match(factorSignPattern);
+        
+        if (factorSignMatches) {
+            for (let match of factorSignMatches){
+                if (match === '*'){
+                    damage *= 2;
+                } else{
+                    damage /= 2;
+                }            
+            }
+        }
+
+        demonsStats.push({demon, health, damage});
     }
 
+    demonsStats.sort((a,b) => a.demon.localeCompare(b.demon));
 
+    for (let demonObj of demonsStats){
+        console.log(`${demonObj.demon} - ${demonObj.health} health, ${demonObj.damage.toFixed(2)} damage`);    
+    }
 }
 
 netherRealms('M3ph-0.5s-0.5t0.0**');
